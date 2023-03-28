@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0 ;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Space Mono', monospace;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    
+    height: 90vh;
+    
+}
+
+h1 {
+    font-weight: 400;
+    
+}
+
+#tetris {
+    outline: 1px solid red;
+}
