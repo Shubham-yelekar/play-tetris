@@ -59,8 +59,26 @@ const COLS = 10;
 
 function generateRandomPiece(){
     let ran = Math.floor(Math.random() * 7); // The random function will get is a integer between 1 to 7, floor will
-    console.log(SHAPES[ran])
+    let piece = SHAPES[ran];
+    let colorIndex = ran + 1;
+    let x = 4;
+    let y = 0; 
+    return {piece,colorIndex,x,y}
 }
 
-generateRandomPiece()
+function renderPiece(){
+    let piece = pieceObj.piece;
+    for(let i=0; i<piece.length; i++){
+        for(let j=0; j<piece[i].length; j++){
+            if(piece[i][j] == 1){
+                ctx.fillStyle = COLORS[pieceObj.colorIndex];
+                ctx.fillRect(pieceObj.x+j,i,1,1)
+            }
+        }
+    }
+}
 
+let pieceObj = generateRandomPiece();
+
+console.log(generateRandomPiece());
+renderPiece()
