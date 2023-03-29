@@ -57,6 +57,10 @@ const COLORS = [
 const ROWS = 20;
 const COLS = 10;
 
+let grid = generateGrid();
+let fallingPieceObj = null;
+let score = 0;
+
 function generateRandomPiece(){
     let ran = Math.floor(Math.random() * 7); // The random function will get is a integer between 1 to 7, floor will
     let piece = SHAPES[ran];
@@ -77,6 +81,8 @@ function renderPiece(){
         }
     }
 }
+
+
 
 let pieceObj = generateRandomPiece();
 
